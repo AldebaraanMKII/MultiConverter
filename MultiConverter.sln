@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiConverterGUI", "MultiC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiConverterLib", "MultiConverterLib\MultiConverterLib.csproj", "{98CEB829-8C46-44BC-A4BB-F7F647B9DFEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiConverterCLI", "MultiConverterCLI\MultiConverterCLI.csproj", "{D6E56D29-3E4B-4B38-8F0C-7F5C1E4A2B90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{98CEB829-8C46-44BC-A4BB-F7F647B9DFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98CEB829-8C46-44BC-A4BB-F7F647B9DFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98CEB829-8C46-44BC-A4BB-F7F647B9DFEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E56D29-3E4B-4B38-8F0C-7F5C1E4A2B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E56D29-3E4B-4B38-8F0C-7F5C1E4A2B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E56D29-3E4B-4B38-8F0C-7F5C1E4A2B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E56D29-3E4B-4B38-8F0C-7F5C1E4A2B90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
