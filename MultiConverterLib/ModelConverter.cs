@@ -276,7 +276,7 @@ namespace MultiConverterLib
 
         private void FixHelmOffset()
         {
-            Regex r = new Regex(@"(.*(/|\\))?(helm)(et)?_.*_(be|dr|dw|gn|hu|ni|or|sc|ta|tr|sk|go)[mf]\.(m2)");
+            Regex r = new Regex(@"(.*(/|\\))?(helm)(et)?_.*_(be|dr|dw|gn|hu|ni|or|sc|ta|tr|sk|go|kt)[mf]\.(m2)");
             if (!r.IsMatch(Path))
             {
                 return;
@@ -393,6 +393,14 @@ namespace MultiConverterLib
                 case "dwf":
                     x = 0.01f;
                     z = -0.195f;
+                    break;
+                case "ktf":
+                    x = -0.0887258f;
+                    z = -0.08623257f;
+                    break;
+                case "ktm":
+                    x = -0.13f;
+                    z = -0.16f;
                     break;
             }
 
