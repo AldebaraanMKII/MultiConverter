@@ -276,11 +276,13 @@ namespace MultiConverterLib
 
         private void FixHelmOffset()
         {
-            Regex r = new Regex(@"(.*(/|\\))?(helm)(et)?_.*_(be|dr|dw|gn|hu|ni|or|sc|ta|tr|sk|go|kt)[mf]\.(m2)");
+            Regex r = new Regex(@"(.*(/|\\))?(helm)(et)?_.*_(be|dr|dw|gn|hu|ni|or|sc|ta|tr|sk|go|kt)[mf]\.(m2)", RegexOptions.IgnoreCase);
             if (!r.IsMatch(Path))
             {
                 return;
             }
+
+            Console.WriteLine($"Applied helm offset: {Path}");
 
             for (int i = 0; i < ReadInt(0x2C); ++i)
             {
@@ -310,7 +312,7 @@ namespace MultiConverterLib
             WriteInt(data_pos + 0x4, data_pos + 8);
             data_pos += 0x8;
 
-            string id = Path.Substring(Path.Length - 6, 3);
+            string id = Path.Substring(Path.Length - 6, 3).ToLower();
 
             switch (id)
             {
@@ -395,12 +397,12 @@ namespace MultiConverterLib
                     z = -0.195f;
                     break;
                 case "ktf":
-                    x = -0.0887258f;
-                    z = -0.08623257f;
+                    x = 0.01f;
+                    z = 0.01f;
                     break;
                 case "ktm":
-                    x = -0.13f;
-                    z = -0.16f;
+                    x = -0.19f;
+                    z = -0.18f;
                     break;
             }
 
